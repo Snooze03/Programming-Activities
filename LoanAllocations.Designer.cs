@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DS_LoanAllocation = new System.Data.DataSet();
             this.TBL_Loan = new System.Data.DataTable();
             this.COL_DateAllocated = new System.Data.DataColumn();
@@ -66,8 +66,8 @@
             this.COL_FullName = new System.Data.DataColumn();
             this.DGV_Customers = new System.Windows.Forms.DataGridView();
             this.BTN_CLose = new System.Windows.Forms.Button();
-            this.dateAllocatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loanNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateAllocatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preparedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.preparedForDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.principalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -268,8 +268,8 @@
             this.DGV_Customers.AutoGenerateColumns = false;
             this.DGV_Customers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Customers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dateAllocatedDataGridViewTextBoxColumn,
             this.loanNumberDataGridViewTextBoxColumn,
+            this.dateAllocatedDataGridViewTextBoxColumn,
             this.preparedByDataGridViewTextBoxColumn,
             this.preparedForDataGridViewTextBoxColumn,
             this.principalDataGridViewTextBoxColumn,
@@ -281,7 +281,7 @@
             this.DGV_Customers.DataMember = "Loan";
             this.DGV_Customers.DataSource = this.DS_LoanAllocation;
             this.DGV_Customers.Location = new System.Drawing.Point(18, 17);
-            this.DGV_Customers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_Customers.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Customers.Name = "DGV_Customers";
             this.DGV_Customers.Size = new System.Drawing.Size(1383, 474);
             this.DGV_Customers.TabIndex = 0;
@@ -290,7 +290,7 @@
             // 
             this.BTN_CLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_CLose.Location = new System.Drawing.Point(1265, 510);
-            this.BTN_CLose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.BTN_CLose.Margin = new System.Windows.Forms.Padding(6);
             this.BTN_CLose.Name = "BTN_CLose";
             this.BTN_CLose.Size = new System.Drawing.Size(136, 43);
             this.BTN_CLose.TabIndex = 2;
@@ -298,22 +298,22 @@
             this.BTN_CLose.UseVisualStyleBackColor = true;
             this.BTN_CLose.Click += new System.EventHandler(this.BTN_CLose_Click);
             // 
-            // dateAllocatedDataGridViewTextBoxColumn
-            // 
-            this.dateAllocatedDataGridViewTextBoxColumn.DataPropertyName = "DateAllocated";
-            dataGridViewCellStyle15.Format = "d";
-            dataGridViewCellStyle15.NullValue = null;
-            this.dateAllocatedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dateAllocatedDataGridViewTextBoxColumn.HeaderText = "Date Allocated";
-            this.dateAllocatedDataGridViewTextBoxColumn.Name = "dateAllocatedDataGridViewTextBoxColumn";
-            this.dateAllocatedDataGridViewTextBoxColumn.Width = 120;
-            // 
             // loanNumberDataGridViewTextBoxColumn
             // 
             this.loanNumberDataGridViewTextBoxColumn.DataPropertyName = "LoanNumber";
             this.loanNumberDataGridViewTextBoxColumn.HeaderText = "Loan #";
             this.loanNumberDataGridViewTextBoxColumn.Name = "loanNumberDataGridViewTextBoxColumn";
             this.loanNumberDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // dateAllocatedDataGridViewTextBoxColumn
+            // 
+            this.dateAllocatedDataGridViewTextBoxColumn.DataPropertyName = "DateAllocated";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dateAllocatedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dateAllocatedDataGridViewTextBoxColumn.HeaderText = "Date Allocated";
+            this.dateAllocatedDataGridViewTextBoxColumn.Name = "dateAllocatedDataGridViewTextBoxColumn";
+            this.dateAllocatedDataGridViewTextBoxColumn.Width = 120;
             // 
             // preparedByDataGridViewTextBoxColumn
             // 
@@ -340,9 +340,9 @@
             // principalDataGridViewTextBoxColumn
             // 
             this.principalDataGridViewTextBoxColumn.DataPropertyName = "Principal";
-            dataGridViewCellStyle16.Format = "C2";
-            dataGridViewCellStyle16.NullValue = null;
-            this.principalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.principalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.principalDataGridViewTextBoxColumn.HeaderText = "Principal";
             this.principalDataGridViewTextBoxColumn.Name = "principalDataGridViewTextBoxColumn";
             this.principalDataGridViewTextBoxColumn.Width = 130;
@@ -350,9 +350,9 @@
             // interestRateDataGridViewTextBoxColumn
             // 
             this.interestRateDataGridViewTextBoxColumn.DataPropertyName = "InterestRate";
-            dataGridViewCellStyle17.Format = "N2";
-            dataGridViewCellStyle17.NullValue = null;
-            this.interestRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.interestRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.interestRateDataGridViewTextBoxColumn.HeaderText = "Rate (%)";
             this.interestRateDataGridViewTextBoxColumn.Name = "interestRateDataGridViewTextBoxColumn";
             this.interestRateDataGridViewTextBoxColumn.Width = 120;
@@ -360,9 +360,9 @@
             // periodsDataGridViewTextBoxColumn
             // 
             this.periodsDataGridViewTextBoxColumn.DataPropertyName = "Periods";
-            dataGridViewCellStyle18.Format = "N2";
-            dataGridViewCellStyle18.NullValue = null;
-            this.periodsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.periodsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.periodsDataGridViewTextBoxColumn.HeaderText = "Prd (Months)";
             this.periodsDataGridViewTextBoxColumn.Name = "periodsDataGridViewTextBoxColumn";
             this.periodsDataGridViewTextBoxColumn.Width = 130;
@@ -370,9 +370,9 @@
             // interestEarnedDataGridViewTextBoxColumn
             // 
             this.interestEarnedDataGridViewTextBoxColumn.DataPropertyName = "InterestEarned";
-            dataGridViewCellStyle19.Format = "C2";
-            dataGridViewCellStyle19.NullValue = null;
-            this.interestEarnedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.interestEarnedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.interestEarnedDataGridViewTextBoxColumn.HeaderText = "Interest Earned";
             this.interestEarnedDataGridViewTextBoxColumn.Name = "interestEarnedDataGridViewTextBoxColumn";
             this.interestEarnedDataGridViewTextBoxColumn.ReadOnly = true;
@@ -381,9 +381,9 @@
             // futureValueDataGridViewTextBoxColumn
             // 
             this.futureValueDataGridViewTextBoxColumn.DataPropertyName = "FutureValue";
-            dataGridViewCellStyle20.Format = "C2";
-            dataGridViewCellStyle20.NullValue = null;
-            this.futureValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.futureValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.futureValueDataGridViewTextBoxColumn.HeaderText = "Future Value";
             this.futureValueDataGridViewTextBoxColumn.Name = "futureValueDataGridViewTextBoxColumn";
             this.futureValueDataGridViewTextBoxColumn.ReadOnly = true;
@@ -392,9 +392,9 @@
             // monthlyPaymentDataGridViewTextBoxColumn
             // 
             this.monthlyPaymentDataGridViewTextBoxColumn.DataPropertyName = "MonthlyPayment";
-            dataGridViewCellStyle21.Format = "C2";
-            dataGridViewCellStyle21.NullValue = null;
-            this.monthlyPaymentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.monthlyPaymentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.monthlyPaymentDataGridViewTextBoxColumn.HeaderText = "Pmt/Month";
             this.monthlyPaymentDataGridViewTextBoxColumn.Name = "monthlyPaymentDataGridViewTextBoxColumn";
             this.monthlyPaymentDataGridViewTextBoxColumn.ReadOnly = true;
@@ -409,7 +409,7 @@
             this.Controls.Add(this.DGV_Customers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FRM_LoanAllocations";
@@ -462,8 +462,8 @@
         private System.Data.DataColumn COL_FullName;
         private System.Windows.Forms.DataGridView DGV_Customers;
         private System.Windows.Forms.Button BTN_CLose;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateAllocatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loanNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateAllocatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn preparedByDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn preparedForDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn principalDataGridViewTextBoxColumn;

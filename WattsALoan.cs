@@ -19,8 +19,8 @@ namespace WattsALoan1
 
         private void BTN_Payments_Click(object sender, EventArgs e)
         {
-            // FRM_Payments frmPayments = new FRM_Payments();
-            // frmPayments.ShowDialog();
+            FRM_Payments frmPayments = new FRM_Payments();
+            frmPayments.ShowDialog();
         }
 
         private void BTN_Allocations_Click(object sender, EventArgs e)
