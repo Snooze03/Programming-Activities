@@ -1,51 +1,48 @@
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
 
 class Main{
     private static QuickSort qSort = new QuickSort();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
-
-        // int size = data.length;
-
-        // // call quicksort() on array data
-        // qSort.quickSort(data, 0, size - 1);
-
-        // System.out.println("Sorted Array in Ascending Order ");
-        // System.out.println(Arrays.toString(data));
         clearScreen();
         MainMenu();
-
     }
 
     private static void MainMenu(){
-        System.out.println("+--------------------------------+\n\n\tSorting Algorithm\n\n\t\n\t1. Quick Sort\n\t2. Exit\n\n+--------------------------------+");
+        System.out.println("+--------------------------------+\n\n\tSorting Algorithm\n\n\t1. Quick Sort\n\t2. Exit\n\n+--------------------------------+");
 
         System.out.print("Option: ");
         int option = Integer.parseInt(scanner.nextLine());
 
         switch(option){
             case 1:
-                clearScreen();
-
-                // Gen array with random elements
-                int[] arr = GenArray();
-                
-                clearScreen();
-                System.out.println("Unsorted Array:");
-                DisplayArray(arr);
-
-                // Sort arr
-                qSort.quickSort(arr, 0, (arr.length - 1));
-
-                System.out.println("\nSorted Array:");
-                DisplayArray(arr);
+                OptionOne();
                 break;
             case 2:
                 System.exit(1);
                 break;
         }
+    }
+
+    private static void OptionOne(){
+        clearScreen();
+
+        // Gen array with random elements
+        int[] arr = GenArray();
+        
+        clearScreen();
+        System.out.println("+----------------------------------+\n");
+        System.out.println("Unsorted Array:");
+        DisplayArray(arr);
+
+        // Sort arr
+        qSort.quickSort(arr, 0, (arr.length - 1));
+
+        System.out.println("\n\nSorted Array:");
+        DisplayArray(arr);
+        System.out.println("\n\n+----------------------------------+");
+
     }
 
     private static int[] GenArray(){
