@@ -108,13 +108,13 @@ public class Main {
 
     private static void DisplayLinkedList(){
         clearScreen();
-        System.out.println("\tDisplaying Linked List\n");
+        System.out.println("Displaying Linked List\n");
         linkedList.display();
     }
 
 
     private static void genLinkedList(){
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 3; i++){
             linkedList.insert(i+3);
         }
     }
