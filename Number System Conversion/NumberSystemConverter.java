@@ -6,7 +6,7 @@ import java.util.Scanner;
 // [x] Decimal to other 
 // [x] Octal to other 
 // [x] Hexa to other 
-// [ ] Input Validation
+// [x] Input Validation
 // [ ] Clean code
 class NumberSystemConverter {
     public static Scanner input = new Scanner(System.in);
@@ -214,6 +214,8 @@ class NumberSystemConverter {
     private static void OctalConverter(){
         CLS();
 
+        System.out.println("==========|| OCTAL ||==========\n");
+
         // Get octal number input from user
         System.out.print("Enter Octal Number: ");
         String octal = input.nextLine();
@@ -283,6 +285,8 @@ class NumberSystemConverter {
     
     private static void HexaConverter(){
         CLS();
+
+        System.out.println("==========|| HEXADECIMAL ||==========\n");
 
         // Get hexadecimal number input from user
         System.out.print("Enter Hexadecimal Number: ");
