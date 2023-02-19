@@ -7,6 +7,7 @@ import java.util.Scanner;
 // [x] Octal to other 
 // [x] Hexa to other 
 // [ ] Input Validation
+// [ ] Clean code
 class NumberSystemConverter {
     public static Scanner input = new Scanner(System.in);
 
@@ -339,77 +340,39 @@ class NumberSystemConverter {
 
 
     /*====================== Validators ============================== */
-    private static boolean isValidBinary(String binary) {
-        if (binary == null || binary.isEmpty()) return false;
+    private static boolean isValidBinary(String input) {
+        // Check if the input is a valid binary number without a fractional part
+        boolean IP = input.matches("^[01]+$");
 
-        for (char c : binary.toCharArray()) {
-            if (c != '0' && c != '1' && c != '.') {
-                return false;
-            }
-        }
-        return true;
+        // Check if the input is a valid binary number with a fractional part
+        boolean FP = input.matches("^[01]+(\\.[01]+)?$");
+
+        // Return true if the input is a valid binary 
+        return IP || FP;
     }
 
-    public static boolean isValidDecimal(String input) {
-        // Check if the input is empty or null
-        if (input == null || input.isEmpty()) return false;
+    private static boolean isValidDecimal(String input) {
+        boolean IP = input.matches("^\\d+$");
+        boolean FP = input.matches("^\\d+(\\.\\d+)?$");
 
-        // Check if each character is a digit or a sign
-        int signCount = 0;
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (!Character.isDigit(c)) {
-                if (i == 0 && (c == '-' || c == '+')) {
-                    // The sign is valid only at the first position
-                    signCount++;
-                } else {
-                    return false;
-                }
-            }
-        }
-
-        // Check if there is at most one sign
-        if (signCount > 1) {
-            return false;
-        }
-
-        // The input is a valid decimal number
-        return true;
+        return IP || FP;
     }
 
-    public static boolean isValidOctal(String input) {
-        // Check if the input is empty or null
-        if (input == null || input.isEmpty()) return false;
+    private static boolean isValidOctal(String input) {
+        boolean IP = input.matches("^[0-7]+$");
+        boolean FP = input.matches("^[0-7]+(\\.[0-7]+)?$");
 
-        // Check if each character is an octal digit
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (c < '0' || c > '7') {
-                return false;
-            }
-        }
-
-        // The input is a valid octal number
-        return true;
+        return IP || FP;
     }
 
-    public static boolean isValidHexadecimal(String input) {
-        // Check if the input is empty or null
-        if (input == null || input.isEmpty()) {
-            return false;
-        }
+    private static boolean isValidHexadecimal(String input) {
+        boolean IP = input.matches("^[0-9a-fA-F]+$");
+        boolean FP = input.matches("^[0-9a-fA-F]+(\\.[0-9a-fA-F]+)?$");
 
-        // Check if each character is a valid hexadecimal digit
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
-            if (!((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'))) {
-                return false;
-            }
-        }
-
-        // The input is a valid hexadecimal number
-        return true;
+        return IP || FP;
     }
+
+
     /*================================================================ */
     private static void menu(int op){
         System.out.println("\n==========|| Options ||==========\n");
@@ -453,6 +416,8 @@ class NumberSystemConverter {
                 System.exit(0);
         }
     } 
+    /*=============================================================== */
+
 
     private static void CLS(){
         try{
