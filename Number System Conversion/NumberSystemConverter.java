@@ -1,13 +1,5 @@
 import java.util.Scanner;
 
-// To Do:
-// [x] Menu
-// [x] Binary to other 
-// [x] Decimal to other 
-// [x] Octal to other 
-// [x] Hexa to other 
-// [x] Input Validation
-// [ ] Clean code
 class NumberSystemConverter {
     public static Scanner input = new Scanner(System.in);
 
@@ -46,16 +38,16 @@ class NumberSystemConverter {
 
         switch(option){
             case 1:
-                BinaryConverter();
+                BinaryPrompt();
                 break;
             case 2:
-                DecimalConverter();
+                DecimalPrompt();
                 break;
             case 3:
-                OctalConverter();
+                OctalPrompt();
                 break;
             case 4:
-                HexaConverter();
+                HexaPrompt();
                 break;
             case 5:
                 System.exit(0);
@@ -65,280 +57,128 @@ class NumberSystemConverter {
     /*================================================================ */
 
 
-    /*========================== CONVERTERS ========================== */
-    private static void BinaryConverter(){
+    /*========================== PROMPTS ============================= */
+    private static void BinaryPrompt(){
         CLS();
 
         System.out.println("==========|| BINARY ||==========\n");
-
-        // Get binary number input from user
-        System.out.print("Enter Binary Number: ");
+        System.out.print("Enter a binary number: ");
         String binary = input.nextLine();
 
-        // checks if input is a valid binary 
-        while (!isValidBinary(binary)){
-            System.out.print("Invalid Binary Number. Please try again: ");
+        // Validate input
+        while(!isValidBinary(binary)){
+            System.out.print("Invalid binary number. Enter a binary number: ");
             binary = input.nextLine();
         }
 
-        // Split the binary number into integral and fractional parts
-        String[] parts = binary.split("\\.");
-        String integralPart = parts[0];
-        String fractionalPart = "";
-
-        if (parts.length > 1) fractionalPart = parts[1];
-
-        // Convert the integral part to octal, decimal, and hexadecimal
-        int integral = Integer.parseInt(integralPart, 2);
-        String octalIntegral = Integer.toOctalString(integral);
-        String decimalIntegral = Integer.toString(integral);
-        String hexadecimalIntegral = Integer.toHexString(integral).toUpperCase();
-
-        // Convert the fractional part to octal, decimal, and hexadecimal
-        StringBuilder octalFractional = new StringBuilder();
-        StringBuilder decimalFractional = new StringBuilder();
-        StringBuilder hexadecimalFractional = new StringBuilder();
-
-    if (!fractionalPart.isEmpty()) {
-            double fractional = Double.parseDouble("0." + fractionalPart);
-
-            while (fractional > 0) {
-                fractional *= 8;
-                int octalDigit = (int) fractional;
-                octalFractional.append(octalDigit);
-                fractional -= octalDigit;
-
-                fractional *= 10;
-                int decimalDigit = (int) fractional;
-                decimalFractional.append(decimalDigit);
-                fractional -= decimalDigit;
-
-                fractional *= 16;
-                int hexadecimalDigit = (int) fractional;
-
-                if (hexadecimalDigit < 10) hexadecimalFractional.append(hexadecimalDigit);
-                else hexadecimalFractional.append((char) ('A' + hexadecimalDigit - 10));
-
-                fractional -= hexadecimalDigit;
-            }
-        }
-
-        // Output the results
-        System.out.print("Decimal: " + decimalIntegral);
-        if (decimalFractional.length() > 0) System.out.print("." + decimalFractional.toString()); 
-        System.out.println();
-        
-        System.out.print("Octal: " + octalIntegral);
-        if (octalFractional.length() > 0) System.out.print("." + octalFractional.toString());
-        System.out.println();
-
-        System.out.print("Hexadecimal: " + hexadecimalIntegral);
-        if (hexadecimalFractional.length() > 0) System.out.print("." + hexadecimalFractional.toString());
-        System.out.println();
+        System.out.println("Decimal: " + convertNumberSystem(binary, 2, 10));
+        System.out.println("Octal: " + convertNumberSystem(binary, 2, 8));
+        System.out.println("Hexadecimal: " + convertNumberSystem(binary, 2, 16).toUpperCase());
 
         menu(1);
-    }
+    } 
 
-    private static void DecimalConverter(){
+    private static void DecimalPrompt(){
         CLS();
 
         System.out.println("==========|| DECIMAL ||==========\n");
-
-        // Get decimal number input from user
-        System.out.print("Enter Decimal Number: ");
+        System.out.print("Enter a decimal number: ");
         String decimal = input.nextLine();
 
-        while (!isValidDecimal(decimal)){
-            System.out.print("Invalid Decimal Number. Please try again: ");
+        while(!isValidDecimal(decimal)){
+            System.out.print("Invalid decimal number. Enter a decimal number: ");
             decimal = input.nextLine();
         }
 
-        // Split the decimal number into integral and fractional parts
-        String[] parts = decimal.split("\\.");
-        String integralPart = parts[0];
-        String fractionalPart = "";
-
-        if (parts.length > 1) fractionalPart = parts[1];
-
-        // Convert the integral part to binary, octal, and hexadecimal
-        int integral = Integer.parseInt(integralPart);
-        String binaryIntegral = Integer.toBinaryString(integral);
-        String octalIntegral = Integer.toOctalString(integral);
-        String hexadecimalIntegral = Integer.toHexString(integral).toUpperCase();
-
-        // Convert the fractional part to binary, octal, and hexadecimal
-        StringBuilder binaryFractional = new StringBuilder();
-        StringBuilder octalFractional = new StringBuilder();
-        StringBuilder hexadecimalFractional = new StringBuilder();
-
-        if (!fractionalPart.isEmpty()) {
-            double fractional = Double.parseDouble("0." + fractionalPart);
-
-            while (fractional > 0) {
-                fractional *= 2;
-                int binaryDigit = (int) fractional;
-                binaryFractional.append(binaryDigit);
-                fractional -= binaryDigit;
-
-                fractional *= 8;
-                int octalDigit = (int) fractional;
-                octalFractional.append(octalDigit);
-                fractional -= octalDigit;
-
-                fractional *= 16;
-                int hexadecimalDigit = (int) fractional;
-
-                if (hexadecimalDigit < 10) hexadecimalFractional.append(hexadecimalDigit);
-                else hexadecimalFractional.append((char) ('A' + hexadecimalDigit - 10));
-
-                fractional -= hexadecimalDigit;
-            }
-        }
-
-        // Output the results
-        System.out.print("Binary: " + binaryIntegral);
-        if (binaryFractional.length() > 0) System.out.print("." + binaryFractional.toString());
-        System.out.println();
-
-        System.out.print("Octal: " + octalIntegral);
-        if (octalFractional.length() > 0) System.out.print("." + octalFractional.toString());
-        System.out.println();
-
-        System.out.print("Hexadecimal: " + hexadecimalIntegral);
-        if (hexadecimalFractional.length() > 0) System.out.print("." + hexadecimalFractional.toString());
-        System.out.println();
+        System.out.println("Binary: " + convertNumberSystem(decimal, 10, 2));
+        System.out.println("Octal: " + convertNumberSystem(decimal, 10, 8));
+        System.out.println("Hexadecimal: " + convertNumberSystem(decimal, 10, 16).toUpperCase());
 
         menu(2);
-    }
+    } 
 
-    private static void OctalConverter(){
+    private static void OctalPrompt(){
         CLS();
 
         System.out.println("==========|| OCTAL ||==========\n");
-
-        // Get octal number input from user
-        System.out.print("Enter Octal Number: ");
+        System.out.print("Enter a octal number: ");
         String octal = input.nextLine();
 
-        while (!isValidOctal(octal)){
-            System.out.print("Invalid Octal Number. Please try again: ");
+        while(!isValidOctal(octal)){
+            System.out.print("Invalid octal number. Enter a octal number: ");
             octal = input.nextLine();
         }
 
-        // Split the octal number into integral and fractional parts
-        String[] parts = octal.split("\\.");
-        String integralPart = parts[0];
-        String fractionalPart = "";
-
-        if (parts.length > 1) fractionalPart = parts[1];
-
-        // Convert the integral part to binary, decimal, and hexadecimal
-        int integral = Integer.parseInt(integralPart, 8);
-        String binaryIntegral = Integer.toBinaryString(integral);
-        String decimalIntegral = Integer.toString(integral);
-        String hexadecimalIntegral = Integer.toHexString(integral).toUpperCase();
-
-        // Convert the fractional part to binary, decimal, and hexadecimal
-        StringBuilder binaryFractional = new StringBuilder();
-        StringBuilder decimalFractional = new StringBuilder();
-        StringBuilder hexadecimalFractional = new StringBuilder();
-
-        if (!fractionalPart.isEmpty()) {
-            double fractional = Double.parseDouble("0." + fractionalPart);
-
-            while (fractional > 0) {
-                fractional *= 2;
-                int binaryDigit = (int) fractional;
-                binaryFractional.append(binaryDigit);
-                fractional -= binaryDigit;
-
-                fractional *= 10;
-                int decimalDigit = (int) fractional;
-                decimalFractional.append(decimalDigit);
-                fractional -= decimalDigit;
-
-                fractional *= 16;
-                int hexadecimalDigit = (int) fractional;
-
-                if (hexadecimalDigit < 10) hexadecimalFractional.append(hexadecimalDigit);
-                else hexadecimalFractional.append((char) ('A' + hexadecimalDigit - 10));
-
-                fractional -= hexadecimalDigit;
-            }
-        }
-
-        // Output the results
-        System.out.print("Binary: " + binaryIntegral);
-        if (binaryFractional.length() > 0)  System.out.print("." + binaryFractional.toString());
-        System.out.println();
-
-        System.out.print("Decimal: " + decimalIntegral);
-        if (decimalFractional.length() > 0) System.out.print("." + decimalFractional.toString());
-        System.out.println();
-
-        System.out.print("Hexadecimal: " + hexadecimalIntegral);
-        if (hexadecimalFractional.length() > 0) System.out.print("." + hexadecimalFractional.toString());
-        System.out.println();
-
-        menu(3);
-    }
+        System.out.println("Binary: " + convertNumberSystem(octal, 8, 2));
+        System.out.println("Decimal: " + convertNumberSystem(octal, 8, 10));
+        System.out.println("Hexadecimal: " + convertNumberSystem(octal, 8, 16).toUpperCase());
     
-    private static void HexaConverter(){
+        menu(3);
+    } 
+
+    private static void HexaPrompt(){
         CLS();
 
         System.out.println("==========|| HEXADECIMAL ||==========\n");
+        System.out.print("Enter a hexadecimal number: ");
+        String hexa = input.nextLine();
 
-        // Get hexadecimal number input from user
-        System.out.print("Enter Hexadecimal Number: ");
-        String hexadecimal = input.nextLine();
-
-        while (!isValidHexadecimal(hexadecimal)){
-            System.out.print("Invalid Hexadecimal Number. Please try again: ");
-            hexadecimal = input.nextLine();
+        while(!isValidHexadecimal(hexa)){
+            System.out.print("Invalid hexadecimal number. Enter a hexadecimal number: ");
+            hexa = input.nextLine();
         }
 
-        // Split the hexadecimal number into integral and fractional parts
-        String[] parts = hexadecimal.split("\\.");
-        String integralPart = parts[0];
-        String fractionalPart = "";
-
-        if (parts.length > 1) fractionalPart = parts[1];
-
-        // Convert the integral part to binary, octal, and decimal
-        int integral = Integer.parseInt(integralPart, 16);
-        String binaryIntegral = Integer.toBinaryString(integral);
-        String octalIntegral = Integer.toOctalString(integral);
-        String decimalIntegral = Integer.toString(integral);
-
-        // Convert the fractional part to binary, octal, and decimal
-        StringBuilder binaryFractional = new StringBuilder();
-        StringBuilder octalFractional = new StringBuilder();
-        double decimalFractional = 0;
-
-        if (!fractionalPart.isEmpty()) {
-            for (char c : fractionalPart.toCharArray()) {
-                int hexDigit = Integer.parseInt(String.valueOf(c), 16);
-                binaryFractional.append(String.format("%04d", Integer.parseInt(Integer.toBinaryString(hexDigit))));
-                octalFractional.append(Integer.toOctalString(hexDigit));
-                decimalFractional += hexDigit / 16.0;
-                decimalFractional /= 16.0;
-            }
-        }
-
-        // Output the results
-        System.out.print("Binary: " + binaryIntegral);
-        if (binaryFractional.length() > 0) System.out.print("." + binaryFractional.toString());
-        System.out.println();
-
-        System.out.print("Octal: " + octalIntegral);
-        if (octalFractional.length() > 0) System.out.print("." + octalFractional.toString());
-        System.out.println();
-
-        System.out.print("Decimal: " + decimalIntegral);
-        if (decimalFractional > 0) System.out.printf("%.15f", (integral + decimalFractional));
-        System.out.println();
+        System.out.println("Binary: " + convertNumberSystem(hexa, 16, 2));
+        System.out.println("Decimal: " + convertNumberSystem(hexa, 16, 10));
+        System.out.println("Octal: " + convertNumberSystem(hexa, 16, 8));
     
         menu(4);
+    } 
+    /*================================================================ */
+
+
+    /*========================== CONVERTERS ========================== */
+    private static String convertNumberSystem(String number, int fromBase, int toBase) {
+        // Split the number into integer and fractional parts
+        String[] parts = number.split("\\.");
+        String integerPart = parts[0];
+        String fractionalPart = parts.length > 1 ? parts[1] : "";
+
+        // Convert the integer part to decimal first
+        int decimalIntegerPart = Integer.parseInt(integerPart, fromBase);
+
+        // Convert the decimal integer part to the target base
+        String resultIntegerPart = Integer.toString(decimalIntegerPart, toBase);
+
+        // Convert the fractional part to decimal if it exists
+        String resultFractionalPart = "";
+        if (!fractionalPart.isEmpty()) {
+            double decimalFractionalPart = 0;
+            for (int i = 0; i < fractionalPart.length(); i++) {
+                int digit = Character.digit(fractionalPart.charAt(i), fromBase);
+                decimalFractionalPart += (double) digit / Math.pow(fromBase, i + 1);
+            }
+            resultFractionalPart = convertFractionalPart(decimalFractionalPart, toBase);
+        }
+
+        // Combine the integer and fractional parts to form the final result
+        String result = resultIntegerPart;
+        if (!resultFractionalPart.isEmpty()) {
+            result += "." + resultFractionalPart;
+        }
+
+        return result;
+    }
+
+    private static String convertFractionalPart(double decimalFractionalPart, int toBase) {
+        StringBuilder result = new StringBuilder();
+        while (decimalFractionalPart > 0) {
+            decimalFractionalPart *= toBase;
+            int digit = (int) decimalFractionalPart;
+            result.append(Character.forDigit(digit, toBase));
+            decimalFractionalPart -= digit;
+        }
+        return result.toString();
     }
     /*================================================================ */
 
@@ -400,16 +240,16 @@ class NumberSystemConverter {
             case 1:
                 switch(op){
                     case 1:
-                        BinaryConverter();
+                        BinaryPrompt();
                         break;
                     case 2:
-                        DecimalConverter();
+                        DecimalPrompt();
                         break;
                     case 3:
-                        OctalConverter();
+                        OctalPrompt();
                         break;    
                     case 4: 
-                        HexaConverter();
+                        HexaPrompt();
                         break;
                 }
                 break;
