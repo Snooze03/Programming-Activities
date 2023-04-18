@@ -11,8 +11,25 @@
 
         For row = 0 To gridSize
             For col = 0 To gridSize
-                If isBorder(row, col, gridSize) OrElse isCellBorder(row, col, cellSizeInGrid, cellSize) _
-                    OrElse isFilled(row, col, cellSizeInGrid) Then
+                '  --------- Full Board ---------
+                ' If isBorder(row, col, gridSize) OrElse isCellBorder(row, col, cellSizeInGrid, cellSize) _
+                ' OrElse isFilled(row, col, cellSizeInGrid) Then
+                ' pattern = pattern & "* "
+
+                ' --------- Full Board no SHADING ---------
+                ' If isCellBorder(row, col, cellSizeInGrid, cellSize) Then
+                ' pattern = pattern & "* "
+
+                ' --------- Shaded only ---------
+                ' If isFilled(row, col, cellSizeInGrid) Then
+                ' pattern = pattern & "* "
+
+                ' ---------- Border ONLY ---------
+                ' If isBorder(row, col, gridSize) Then
+                ' pattern = pattern & "* "
+                ' Else
+
+                If isCellBorder(row, col, cellSizeInGrid, cellSize) Then
                     pattern = pattern & "* "
                 Else
                     pattern = pattern & "  "
