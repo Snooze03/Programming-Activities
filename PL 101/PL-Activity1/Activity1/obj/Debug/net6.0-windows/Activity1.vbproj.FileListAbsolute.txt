@@ -1,0 +1,34 @@
+D:\School\Programming-Activities\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.exe
+D:\School\Programming-Activities\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.deps.json
+D:\School\Programming-Activities\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.runtimeconfig.json
+D:\School\Programming-Activities\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.dll
+D:\School\Programming-Activities\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.pdb
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.AssemblyReference.cache
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.Form1.resources
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.GenerateResource.cache
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.AssemblyInfoInputs.cache
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.AssemblyInfo.vb
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.CoreCompileInputs.cache
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.dll
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\refint\Activity1.dll
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.pdb
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.genruntimeconfig.cache
+D:\School\Programming-Activities\PL-Activity1\Activity1\obj\Debug\net6.0-windows\ref\Activity1.dll
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.exe
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.deps.json
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.runtimeconfig.json
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.dll
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\bin\Debug\net6.0-windows\Activity1.pdb
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.AssemblyReference.cache
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.Form1.resources
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.GenerateResource.cache
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.AssemblyInfoInputs.cache
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.AssemblyInfo.vb
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.vbproj.CoreCompileInputs.cache
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.dll
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\refint\Activity1.dll
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.pdb
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\Activity1.genruntimeconfig.cache
+D:\School\Programming-Activities\PL 101\PL-Activity1\Activity1\obj\Debug\net6.0-windows\ref\Activity1.dll

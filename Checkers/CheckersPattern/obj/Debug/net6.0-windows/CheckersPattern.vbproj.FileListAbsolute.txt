@@ -1,0 +1,17 @@
+D:\School\Programming-Activities\Checkers\CheckersPattern\bin\Debug\net6.0-windows\CheckersPattern.exe
+D:\School\Programming-Activities\Checkers\CheckersPattern\bin\Debug\net6.0-windows\CheckersPattern.deps.json
+D:\School\Programming-Activities\Checkers\CheckersPattern\bin\Debug\net6.0-windows\CheckersPattern.runtimeconfig.json
+D:\School\Programming-Activities\Checkers\CheckersPattern\bin\Debug\net6.0-windows\CheckersPattern.dll
+D:\School\Programming-Activities\Checkers\CheckersPattern\bin\Debug\net6.0-windows\CheckersPattern.pdb
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.vbproj.AssemblyReference.cache
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.Form1.resources
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.vbproj.GenerateResource.cache
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.AssemblyInfoInputs.cache
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.AssemblyInfo.vb
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.vbproj.CoreCompileInputs.cache
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.dll
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\refint\CheckersPattern.dll
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.pdb
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\CheckersPattern.genruntimeconfig.cache
+D:\School\Programming-Activities\Checkers\CheckersPattern\obj\Debug\net6.0-windows\ref\CheckersPattern.dll

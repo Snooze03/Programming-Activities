@@ -1,0 +1,13 @@
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\bin\Debug\Avtii.exe.config
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\bin\Debug\Avtii.exe
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\bin\Debug\Avtii.pdb
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\bin\Debug\Avtii.xml
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Activity1.vbproj.AssemblyReference.cache
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Activity1.vbproj.SuggestedBindingRedirects.cache
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Avtii.Form1.resources
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Avtii.Resources.resources
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Activity1.vbproj.GenerateResource.cache
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Activity1.vbproj.CoreCompileInputs.cache
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Avtii.exe
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Avtii.xml
+D:\School\Programming-Activities\Visual Basic\Activity 1\Avtii\obj\Debug\Avtii.pdb

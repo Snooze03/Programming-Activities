@@ -154,30 +154,32 @@ class NumberSystemConverter {
         String resultFractionalPart = "";
         if (!fractionalPart.isEmpty()) {
             double decimalFractionalPart = 0;
+
             for (int i = 0; i < fractionalPart.length(); i++) {
                 int digit = Character.digit(fractionalPart.charAt(i), fromBase);
                 decimalFractionalPart += (double) digit / Math.pow(fromBase, i + 1);
             }
+
             resultFractionalPart = convertFractionalPart(decimalFractionalPart, toBase);
         }
 
         // Combine the integer and fractional parts to form the final result
         String result = resultIntegerPart;
-        if (!resultFractionalPart.isEmpty()) {
-            result += "." + resultFractionalPart;
-        }
+        if (!resultFractionalPart.isEmpty()) result += "." + resultFractionalPart;
 
         return result;
     }
 
     private static String convertFractionalPart(double decimalFractionalPart, int toBase) {
         StringBuilder result = new StringBuilder();
+
         while (decimalFractionalPart > 0) {
             decimalFractionalPart *= toBase;
             int digit = (int) decimalFractionalPart;
             result.append(Character.forDigit(digit, toBase));
             decimalFractionalPart -= digit;
         }
+
         return result.toString();
     }
     /*================================================================ */
@@ -260,7 +262,6 @@ class NumberSystemConverter {
                 System.exit(0);
         }
     } 
-    /*=============================================================== */
 
 
     private static void CLS(){
@@ -279,5 +280,6 @@ class NumberSystemConverter {
         catch(Exception e){
             System.out.println(e);
         }
+    /*=============================================================== */
     }
 }

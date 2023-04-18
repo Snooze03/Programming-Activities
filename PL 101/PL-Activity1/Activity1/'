@@ -1,0 +1,77 @@
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub BTN_Ok_Click(sender As Object, e As EventArgs)
+        ' Variables
+        Dim pAtt, pCP, pQuiz, pExam As Double
+        Dim mAtt, mCP, mQuiz, mExam As Double
+        Dim fAtt, fCP, fQuiz, fExam As Double
+
+        ' Prelim Grade
+        pAtt = Double.Parse(PrelimAttendance.Text)
+        pCP = Double.Parse(PrelimCP.Text)
+        pQuiz = Double.Parse(PrelimQuiz.Text)
+        pExam = Double.Parse(PrelimExam.Text)
+        Dim TotalPrelimGrade = pAtt * 0.05 + pCP * 0.15 + pQuiz * 0.3 + pExam * 0.5
+
+        ' Midterm Grade
+        mAtt = Double.Parse(MidtermAttendance.Text)
+        mCP = Double.Parse(MidtermCP.Text)
+        mQuiz = Double.Parse(MidtermQuiz.Text)
+        mExam = Double.Parse(MidtermExam.Text)
+        Dim TotalMidtermGrade = mAtt * 0.05 + mCP * 0.15 + mQuiz * 0.3 + mExam * 0.5
+
+        ' Final Grade
+        fAtt = Double.Parse(FinalAttendance.Text)
+        fCP = Double.Parse(FinalCP.Text)
+        fQuiz = Double.Parse(FinalQuiz.Text)
+        fExam = Double.Parse(FinalExam.Text)
+        Dim TotalFinalGrade = fAtt * 0.05 + fCP * 0.15 + fQuiz * 0.3 + fExam * 0.5
+
+        ' Alphabet equivalent
+        Dim semGrade As Double = TotalPrelimGrade * 0.3 + TotalMidtermGrade * 0.3 + TotalFinalGrade * 0.4
+        Dim semA As String
+
+        If (semGrade >= 95 And semGrade <= 100) Then
+            semA = "A"
+        ElseIf (semGrade >= 90 And semGrade <= 95) Then
+            semA = "B"
+        ElseIf (semGrade >= 85 And semGrade <= 90) Then
+            semA = "C"
+        ElseIf (semGrade >= 80 And semGrade <= 85) Then
+            semA = "D"
+        ElseIf (semGrade >= 75 And semGrade <= 80) Then
+            semA = "E"
+        ElseIf (semGrade >= 60 And semGrade <= 75) Then
+            semA = "F"
+        End If
+
+        ' Remarks
+        Dim remarks As String
+
+        If (semGrade >= 75) Then
+            remarks = "PASSED"
+        Else
+            remarks = "FAILED"
+        End If
+
+        ' Output
+        TXTBX_Name.Text = TXTBX_firstName.Text + TXTBX_midInitial.Text + TXTBX_lastName.Text
+        TXTBX_PrelimGrade.Text = TotalPrelimGrade
+        TXTBX_MidtermGrade.Text = TotalMidtermGrade
+        TXTBX_FinalGrade.Text = TotalFinalGrade
+        TXTBX_SemGrade.Text = String.Format("{0} ( {1} )", semGrade, semA)
+        TXTBX_Remarks.Text = remarks
+
+    End Sub
+
+    Private Sub BTN_clear_Click(sender As Object, e As EventArgs)
+        For Each ctrl As Control In Me.Controls
+            If TypeOf ctrl Is TextBox Then
+                CType(ctrl, TextBox).Text = ""
+            End If
+        Next
+    End Sub
+End Class
